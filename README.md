@@ -1,4 +1,4 @@
-HelpiBot is a twitter bot that responds to commands sent via tweet.
+[HelpiBot](https://twitter.com/#!/HelpiBot) is a twitter bot that responds to commands sent via tweet.
 
 As of right now, the only command it responds to is 'insult'
 
