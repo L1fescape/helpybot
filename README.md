@@ -33,6 +33,8 @@ Change 'Access' under 'Application Type' to 'Read and Write' (or 'Read, Write an
 
 Click on the 'Details' tab, then scroll down to 'Your Access Token' and hit 'Create my access token'
 
+Copy down your Consumer key, Consumer secret, Access token, and Access token secret.
+
 Back in terminal:
 
     vim settings.py
