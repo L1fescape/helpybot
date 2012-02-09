@@ -1,4 +1,4 @@
-HelipBot
+HelpiBot
 --------
 [HelpiBot](https://twitter.com/#!/HelpiBot) is a twitter bot that responds to commands sent via tweet.
 
@@ -11,9 +11,9 @@ The original project can be found here: https://github.com/theabraham/Helpy-Bot
 
 Examples
 --------
-### Command (sent via tweet)
+### Command
     @HelpiBot insult @A_Ken for me please.
-### Response (received via tweet)
+### Response
     @A_Ken Your Mama's So fat, when she wears a yellow raincoat, people said 'Taxi!'
 
 Installation
