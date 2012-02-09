@@ -4,7 +4,7 @@ HelpiBot
 
 As of right now, the only command it responds to is 'insult'
 
-This is a branch off of the original Helpy-Bot written by [theabraham](https://github.com/theabraham), [MarcoPolo](https://github.com/MarcoPolo), and myself for the University of Florida's 2012 Innovation Hub Hackathon.
+This is a branch off of the original Helpy-Bot written by [theabraham](https://github.com/theabraham), [MarcoPolo](https://github.com/MarcoPolo), and [myself](https://github.com/L1fescape) for the University of Florida's 2012 Innovation Hub Hackathon.
 
 The original project can be found here: https://github.com/theabraham/Helpy-Bot
 
