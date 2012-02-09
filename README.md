@@ -12,9 +12,16 @@ The original project can be found here: https://github.com/theabraham/Helpy-Bot
 Examples
 --------
 ### Command
-    @HelpiBot insult @A_Ken for me please.
+    @HelpiBot insult @Helpy_Bot for me please.
+### Response
+    @Helpy_Bot Your Mama's So fat, when she wears a yellow raincoat, people said 'Taxi!'
+
+### Command
+    @HelpiBot insult @A_Ken, @marco_polol, and @rich90usaif you'd be so kind.
 ### Response
     @A_Ken Your Mama's So fat, when she wears a yellow raincoat, people said 'Taxi!'
+    @marco_polol Your Mama's got three teeth...one in her mouth & two in her pocket.
+    @rich90usa You're so ugly they know what time you were born, because your face stopped the clock!
 
 Installation
 ------------
