@@ -1,3 +1,5 @@
+HelipBot
+--------
 [HelpiBot](https://twitter.com/#!/HelpiBot) is a twitter bot that responds to commands sent via tweet.
 
 As of right now, the only command it responds to is 'insult'
@@ -9,9 +11,9 @@ The original project can be found here: https://github.com/theabraham/Helpy-Bot
 
 Examples
 --------
-### Command
+### Command (sent via tweet)
     @HelpiBot insult @A_Ken for me please.
-### Response
+### Response (received via tweet)
     @A_Ken Your Mama's So fat, when she wears a yellow raincoat, people said 'Taxi!'
 
 Installation
