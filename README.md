@@ -15,10 +15,11 @@ Don't worry, there will be many more
 
 ## Installation
 
-1. <code>git clone git@github.com:L1fescape/HelpyBot.git</code>
-2. Create a Twitter account for your bot (Alternatively you can use your personal twitter account and have the bot reply as if it were you).
-3. Go to [dev.twitter.com](https://dev.twitter.com/), create an application, and grab the Consumer key, Consumer secret, Access token, and Access token secret.
-4. Create a file called `settings.py` with the following contents:
+1. `git clone git@github.com:L1fescape/HelpyBot.git`
+2. `pip install -r requirements.txt`
+3. Create a Twitter account for your bot (Alternatively you can use your personal twitter account and have the bot reply as if it were you).
+4. Go to [dev.twitter.com](https://dev.twitter.com/), create an application, and grab the Consumer key, Consumer secret, Access token, and Access token secret.
+5. Create a file called `settings.py` with the following contents:
     <code><pre>consumer_key="Your Consumer Key Here"
     consumer_secret="Your Consumer Secret Here"
     access_token="Your Access Token Here"
