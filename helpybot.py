@@ -13,26 +13,31 @@ import settings
 class HelpyBot(StreamListener):
     def __init__(self, api):
         self.api = api
-        self.commands = ['hi']
+        self.commands = settings.commands
         super(HelpyBot, self).__init__()
     
     def on_status(self, status):
+        # parse the incoming tweet so it's easier to process later
+        tweet = self.parse_status(status)
+        
+        # Debugging shits
         print '-' * 20
         print "New status at", datetime.now(), "|", unicode(status.text)
-        tweet = self.parse_status(status)
         pp = pprint.PrettyPrinter(indent=4)
         pp.pprint(tweet)
         
         # Subscribing to tweets from helpy bot includes tweets it sends out.
         # Don't parse those.
         if (not re.match('@helpybot', tweet['target'])):
-            print '[Helpy] Tweet not meant for Helpy Bot.'
             return
 
+        # If command matches the set of available commands, run the command.
+        # Else throw an error.
         if (tweet['command'] in self.commands):
           getattr(self, tweet['command'])(tweet)
         else:
           print '[Helpy] Error - unknown command %s' % tweet['command']
+
         return
 
     def parse_status(self, status):
@@ -67,6 +72,7 @@ class HelpyBot(StreamListener):
     
 
 if __name__ == '__main__':
+    '''
     # authenticate using variables defined in settings.py
     auth = tweepy.OAuthHandler(settings.consumer_key, settings.consumer_secret)
     auth.set_access_token(settings.access_token, settings.access_token_secret)
@@ -79,3 +85,5 @@ if __name__ == '__main__':
     follow_list = ['484471774']
     track_list = None
     stream.filter(follow_list, track_list)
+    '''
+
