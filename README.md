@@ -21,7 +21,7 @@ Don't worry, there will be many more
 4. Go to [dev.twitter.com](https://dev.twitter.com/), create an application, and grab the Consumer key, Consumer secret, Access token, and Access token secret.
 5. Create a file called `settings.py` with the following contents:
 
-<pre><code># list of enabled commands
+<pre><code>    # list of enabled commands
     commands = ["hello"]
     # twitter api settings
     consumer_key="Your Consumer Key Here"
