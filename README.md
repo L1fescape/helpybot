@@ -20,10 +20,15 @@ Don't worry, there will be many more
 3. Create a Twitter account for your bot (Alternatively you can use your personal twitter account and have the bot reply as if it were you).
 4. Go to [dev.twitter.com](https://dev.twitter.com/), create an application, and grab the Consumer key, Consumer secret, Access token, and Access token secret.
 5. Create a file called `settings.py` with the following contents:
-    <code><pre>consumer_key="Your Consumer Key Here"
+
+<pre><code># list of enabled commands
+    commands = ["hello"]
+    # twitter api settings
+    consumer_key="Your Consumer Key Here"
     consumer_secret="Your Consumer Secret Here"
     access_token="Your Access Token Here"
-    access_token_secret="Your Access Token Secret Here"</pre></code>
+    access_token_secret="Your Access Token Secret Here"```
+</code></pre>
 
 ## Running
 
