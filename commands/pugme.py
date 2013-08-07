@@ -3,7 +3,7 @@
 #   of pugs.
 #
 # Dependencies:
-#   None
+#   requests
 #
 # Configuration:
 #   None
@@ -31,7 +31,7 @@ def response(helpybot, tweet):
   # grab the actual search results out of the response
   pug_results = json.loads(r.text)['responseData']['results']
   # google returns 4 results per page. pick a random result and grab the image url from it
-  response = pug_results[randint(0,3)]['url']
+  response = target + " " + pug_results[randint(0,3)]['url']
 
   helpybot.post_tweet(response, tweet)
   return
