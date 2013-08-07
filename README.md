@@ -22,13 +22,16 @@ Don't worry, there will be many more
 5. Create a file called `settings.py` with the following contents:
 
 <pre><code># list of enabled commands
-commands = ["hello"]
+commands = ['hello']
+
+# Twitter user id
+user_id = 'Your UserId Here'
 
 # twitter api settings
-consumer_key="Your Consumer Key Here"
-consumer_secret="Your Consumer Secret Here"
-access_token="Your Access Token Here"
-access_token_secret="Your Access Token Secret Here"
+consumer_key='Your Consumer Key Here'
+consumer_secret='Your Consumer Secret Here'
+access_token='Your Access Token Here'
+access_token_secret='Your Access Token Secret Here'
 </code></pre>
 
 ## Running

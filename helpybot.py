@@ -1,6 +1,3 @@
-import sys
-sys.path.insert(0, 'commands')
-
 # packages
 import tweepy
 from tweepy.streaming import StreamListener, Stream
@@ -13,6 +10,11 @@ import re
 # configuration
 import settings
 
+# include 'commands' as part of the sys path
+import sys
+sys.path.insert(0, 'commands')
+
+
 class HelpyBot(StreamListener):
     def __init__(self, api):
         self.debug = True
@@ -22,18 +24,17 @@ class HelpyBot(StreamListener):
         for module_name in self.commands:
           module = __import__(module_name)
           self.modules[module.matches] = module.response
-        #super(HelpyBot, self).__init__()
+        super(HelpyBot, self).__init__()
     
     def on_status(self, status):
         # parse the incoming tweet so it's easy to process
         tweet = self.parse_status(status)
         
-        # Debugging shits
+        # Debugging
         if self.debug:
           print '-' * 20
-          print "New status at", datetime.now(), "|", unicode(status.text)
-          pp = pprint.PrettyPrinter(indent=4)
-          pp.pprint(tweet)
+          print datetime.now()
+          print "Tweet: \t\t", unicode(status.text)
         
         # Subscribing to tweets from helpy bot includes tweets it sends out.
         # Don't parse those.
@@ -65,7 +66,8 @@ class HelpyBot(StreamListener):
         return tweet
 
     def post_tweet(self, response, tweet):
-        print response
+        if self.debug:
+          print "Response: \t", unicode(response)
         api.update_status(response)
         return
 
@@ -75,22 +77,9 @@ if __name__ == '__main__':
     auth.set_access_token(settings.access_token, settings.access_token_secret)
     api = tweepy.API(auth)
 
-    # 
+    # initialize helpybot and stream listener
     helpy = HelpyBot(api)
     stream = Stream(auth, helpy)
-    
-    follow_list = ['484471774']
+    follow_list = [settings.user_id]
     track_list = None
     stream.filter(follow_list, track_list)
-
-    ''' 
-    # test
-    helpy = HelpyBot({})
-    tweet = {
-      'text': '@helpybot hello there!',
-      'user': {
-        'screen_name': 'blah'
-      }
-    }
-    helpy.on_status(tweet)
-    '''
