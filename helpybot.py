@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, 'commands')
+
 # packages
 import tweepy
 from tweepy.streaming import StreamListener, Stream
@@ -12,37 +15,43 @@ import settings
 
 class HelpyBot(StreamListener):
     def __init__(self, api):
+        self.debug = True
         self.api = api
         self.commands = settings.commands
-        super(HelpyBot, self).__init__()
+        self.modules = {}
+        for module_name in self.commands:
+          module = __import__(module_name)
+          self.modules[module.matches] = module.response
+        #super(HelpyBot, self).__init__()
     
     def on_status(self, status):
-        # parse the incoming tweet so it's easier to process later
+        # parse the incoming tweet so it's easy to process
         tweet = self.parse_status(status)
         
         # Debugging shits
-        print '-' * 20
-        print "New status at", datetime.now(), "|", unicode(status.text)
-        pp = pprint.PrettyPrinter(indent=4)
-        pp.pprint(tweet)
+        if self.debug:
+          print '-' * 20
+          print "New status at", datetime.now(), "|", unicode(status.text)
+          pp = pprint.PrettyPrinter(indent=4)
+          pp.pprint(tweet)
         
         # Subscribing to tweets from helpy bot includes tweets it sends out.
         # Don't parse those.
         if (not re.match('@helpybot', tweet['target'])):
             return
 
-        # If command matches the set of available commands, run the command.
-        # Else throw an error.
-        if (tweet['command'] in self.commands):
-          getattr(self, tweet['command'])(tweet)
-        else:
-          print '[Helpy] Error - unknown command %s' % tweet['command']
+        # If command matches an available command, run the command. Does this
+        # by looping through all of the enabled commands' regular expressions
+        # checking for matches
+        for module_regex in self.modules:
+          command = re.compile(module_regex)
+          if command.match(tweet['command']):
+            self.modules[module_regex](self, tweet)
 
         return
 
     def parse_status(self, status):
         tokens = status.text.lower().split()
-        print tokens 
         tweet = {}
         tweet['target'] = tokens[0]
         tweet['command'] = tokens[1].strip('.,!?')
@@ -56,23 +65,11 @@ class HelpyBot(StreamListener):
         return tweet
 
     def post_tweet(self, response, tweet):
-        post = response
-        print tweet['targets']
-        api.update_status(post)
+        print response
+        api.update_status(response)
         return
 
-
-    ''' Functions '''
-    
-    def hi(self, tweet):
-      target = "@" + tweet['sender']
-      response = 'Well hi there ' + target + '!'
-      self.post_tweet(response, tweet)
-      return
-    
-
 if __name__ == '__main__':
-    '''
     # authenticate using variables defined in settings.py
     auth = tweepy.OAuthHandler(settings.consumer_key, settings.consumer_secret)
     auth.set_access_token(settings.access_token, settings.access_token_secret)
@@ -85,5 +82,15 @@ if __name__ == '__main__':
     follow_list = ['484471774']
     track_list = None
     stream.filter(follow_list, track_list)
-    '''
 
+    ''' 
+    # test
+    helpy = HelpyBot({})
+    tweet = {
+      'text': '@helpybot hello there!',
+      'user': {
+        'screen_name': 'blah'
+      }
+    }
+    helpy.on_status(tweet)
+    '''
