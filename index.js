@@ -28,6 +28,8 @@ slack.on('message', function(message) {
   if (text === 'hi') {
     response = 'hello ' + user.name + '!';
     channel.send(response)
+  } else if (text == 'bye') {
+    channel.send('good riddance');
   }
 });
 
