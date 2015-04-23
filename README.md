@@ -11,7 +11,7 @@ npm install
 ### Run
 
 ```
-SLACK_TOKEN=[your slack token] node index.js
+SLACK_TOKEN=[your slack token] node start
 ```
 
 ### TODO

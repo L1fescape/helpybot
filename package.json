@@ -1,14 +1,15 @@
 {
-  "name": "slack-bot",
+  "name": "helpybot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple slack bot",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/babel/bin/babel-node index.js"
   },
-  "author": "",
+  "author": "Andrew Kennedy <andrew@akenn.org>",
   "license": "ISC",
   "dependencies": {
+    "babel": "^5.1.11",
     "lodash": "^3.7.0",
     "slack-client": "^1.4.0"
   }
