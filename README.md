@@ -1,6 +1,6 @@
 ## HelpyBot
 
-> A really simple Slack Bot
+> A Slack Bot
 
 ### Install
 
@@ -11,8 +11,14 @@ npm install
 ### Run
 
 ```
-SLACK_TOKEN=[your slack token] node start
+SLACK_TOKEN=[your slack token] npm start
 ```
+
+### Scripts
+
+- hi - Say hello!
+- pug me - You won't regret it
+- it's a trap - Display an Admiral Ackbar piece of wonder
 
 ### TODO
 
