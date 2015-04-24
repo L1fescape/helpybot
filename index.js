@@ -6,6 +6,7 @@ new HelpyBot({
   scripts: [
     'hello',
     'pugme',
-    'ackbar'
+    'ackbar',
+    'markov'
   ]
 });
