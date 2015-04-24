@@ -30,11 +30,11 @@ var tarps = [
 
 export default function (bot) {
 
-  bot.hear(/it'?s a trap/i, 'it\'s a trap - Display an Admiral Ackbar piece of wonder', function(text, channel) {
+  bot.hear(/it'?s a trap/i, 'it\'s a trap - Display an Admiral Ackbar piece of wonder', (text, channel) => {
     channel.send(ackbars[Math.floor(Math.random()*ackbars.length)]);
   });
 
-  bot.hear(/it'?s a tarp/i, function(msg) {
+  bot.hear(/it'?s a tarp/i, (msg) => {
     channel.send(tarps[Math.floor(Math.random()*tarps.length)]);
   });
 }
