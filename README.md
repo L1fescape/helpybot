@@ -1,3 +1,5 @@
+![Helpy Bot](http://i.imgur.com/7NptCgF.png)
+
 ## HelpyBot
 
 > A Slack Bot
