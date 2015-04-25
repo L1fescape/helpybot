@@ -1,15 +1,23 @@
+import _ from 'lodash';
+
+function randomResponse(user) {
+  var responses = [
+    `hi ${user.name}!`,
+    `hello ${user.name}!`
+  ];
+  return _.shuffle(responses)[0];
+}
+
 export default function (bot) {
 
   var regex = /^(hi|hello|hai)$/i
 
   bot.command(regex, 'hi - say hello!', (text, channel, user) => {
-    var response = 'hello ' + user.name + '!';
-    channel.send(response)
+    channel.send(randomResponse(user))
   });
 
   bot.hear(regex, (text, channel, user) => {
-    var response = 'hello ' + user.name + '!';
-    channel.send(response)
+    channel.send(randomResponse(user))
   });
 
   bot.hear(/^bye$/i, (text, channel, user) => {
