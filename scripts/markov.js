@@ -1,3 +1,5 @@
+// todo: implement a real Markov chain.
+
 export default function (bot) {
 
   var responses = [];
