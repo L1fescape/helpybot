@@ -1,6 +1,6 @@
 ![Helpy Bot](http://i.imgur.com/7NptCgF.png)
 
-## HelpyBot
+## HelpyBot [![Build Status](https://travis-ci.org/akenn/helpybot.svg?branch=master)](https://travis-ci.org/akenn/helpybot)
 
 > A Slack Bot
 
@@ -10,7 +10,7 @@
 npm install
 ```
 
-### Run
+### Start
 
 ```
 SLACK_TOKEN=[your slack token] npm start
@@ -21,6 +21,12 @@ SLACK_TOKEN=[your slack token] npm start
 - hi - Say hello!
 - pug me - You won't regret it
 - it's a trap - Display an Admiral Ackbar piece of wonder
+
+### Run tests
+
+```
+npm run test
+```
 
 ### TODO
 
