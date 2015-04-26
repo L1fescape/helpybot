@@ -21,7 +21,7 @@ describe('HelpyBot tests', function() {
   });
 
   it('should try to login if a slack token is provided', function() {
-    this.sandbox.stub(Slack.login);
+    this.sandbox.stub(Slack.prototype, 'login');
     var bot = new HelpyBot({
       token: '12345'
     });

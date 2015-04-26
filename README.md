@@ -25,7 +25,7 @@ SLACK_TOKEN=[your slack token] npm start
 ### Run tests
 
 ```
-npm run test
+npm test
 ```
 
 ### TODO
