@@ -4,8 +4,8 @@
   "description": "A simple slack bot",
   "main": "lib/index.js",
   "scripts": {
-    "start": "./node_modules/babel/bin/babel-node index.js",
-    "test": "mocha"
+    "start": "babel-node index.js",
+    "test": "mocha --require babel/register"
   },
   "author": "Andrew Kennedy <andrew@akenn.org>",
   "license": "ISC",

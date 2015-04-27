@@ -1,11 +1,10 @@
-require('babel/register');
 var expect = require('chai').expect;
 var sinon = require('sinon');
 
 var HelpyBot = require('./lib');
 var Slack = require('slack-client');
 
-describe('HelpyBot tests', function() {
+describe('HelpyBot tests', () => {
   beforeEach(function() {
     this.sandbox = sinon.sandbox.create();
   });
@@ -15,7 +14,7 @@ describe('HelpyBot tests', function() {
   });
 
   it('should throw an error if no slack token is provided', function() {
-    expect(function() {
+    expect(() => {
       new HelpyBot();
     }).to.throw('You must provide a slack token');
   });
