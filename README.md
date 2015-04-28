@@ -21,6 +21,7 @@ SLACK_TOKEN=[your slack token] npm start
 - hi - Say hello!
 - pug me - You won't regret it
 - it's a trap - Display an Admiral Ackbar piece of wonder
+- smash - Did someone say it?
 
 ### Run tests
 
