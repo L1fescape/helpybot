@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "babel-node index.js",
-    "test": "mocha --require babel/register"
+    "test": "mocha --require babel/register test/setup.js test/bot.js test/scripts/*.js"
   },
   "author": "Andrew Kennedy <andrew@akenn.org>",
   "license": "ISC",
