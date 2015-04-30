@@ -29,6 +29,10 @@ SLACK_TOKEN=[your slack token] npm start
 npm test
 ```
 
-### TODO
+### Credits 
 
-- Make this awesome!
+- [Ibrahim Al Rajhi](https://github.com/theabraham) - made the sweet HelpyBot icon
+
+### License
+
+MIT license. Copyright [Andrew Kennedy](https://akenn.org)
