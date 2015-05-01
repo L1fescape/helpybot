@@ -24,7 +24,7 @@ beforeEach(function() {
   });
 
   // create a test user, message, and channel
-  this.user = { name: 'Andrew' };
+  this.user = { name: 'Andrew', id: 2 };
   this.channel = new SlackChannel();
   this.testMessage = {
     channel: this.channel,

@@ -8,6 +8,7 @@ new HelpyBot({
     'pugme',
     'ackbar',
     'markov',
-    'smash'
+    'smash',
+    'vote'
   ]
 });
