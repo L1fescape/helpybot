@@ -9,6 +9,7 @@ new HelpyBot({
     'ackbar',
     'markov',
     'smash',
-    'poll'
+    'poll',
+    'thuglife'
   ]
 });
