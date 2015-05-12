@@ -1,7 +1,16 @@
 import _ from 'lodash';
 
 var thugs = [
-  'https://www.youtube.com/watch?v=x0rJW5Qyc-o'
+  'https://www.youtube.com/watch?v=x0rJW5Qyc-o',
+  'https://youtu.be/cBKfP327XMU',
+  'https://youtu.be/1sowq_HBF3E',
+  'https://youtu.be/LxX4iYL8KcQ',
+  'https://youtu.be/fYh0C815I7Y',
+  'https://youtu.be/YTs6l9JHs5w',
+  'https://youtu.be/YTs6l9JHs5w',
+  'https://youtu.be/zIPKyuvtfc4',
+  'https://youtu.be/-9xvAMNllzs',
+  'https://youtu.be/ONT7DTPy0Zc'
 ];
 
 export default function (bot) {
