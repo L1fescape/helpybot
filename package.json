@@ -2,15 +2,14 @@
   "name": "helpybot",
   "version": "0.0.1",
   "description": "A simple slack bot",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "test": "mocha --require babel/register test/setup.js test/bot.js test/scripts/*.js"
+    "start": "node index.js",
+    "test": "mocha test/setup.js test/bot.js test/scripts/*"
   },
   "author": "Andrew Kennedy <andrew@akenn.org>",
   "license": "ISC",
   "dependencies": {
-    "babel": "^5.1.11",
     "chalk": "^1.0.0",
     "lodash": "^3.7.0",
     "request": "^2.55.0",

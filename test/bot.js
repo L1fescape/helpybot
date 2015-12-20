@@ -1,8 +1,8 @@
 var _ = require('lodash');
 
-describe('HelpyBot', () => {
+describe('HelpyBot', function() {
   it('should throw an error if no slack token is provided', function() {
-    expect(() => {
+    expect(function() {
       new HelpyBot();
     }).to.throw('You must provide a slack token');
   });

@@ -1,4 +1,4 @@
-import _ from 'lodash';
+var _ = require('lodash');
 
 var thugs = [
   'https://www.youtube.com/watch?v=x0rJW5Qyc-o',
@@ -13,8 +13,8 @@ var thugs = [
   'https://youtu.be/ONT7DTPy0Zc'
 ];
 
-export default function (bot) {
-  bot.hear(/(thug life|thuglife)/i, (text, channel, user) => {
+module.exports = function (bot) {
+  bot.hear(/(thug life|thuglife)/i, function(text, channel, user) {
     channel.send(_.shuffle(thugs)[0]);
   });
 }

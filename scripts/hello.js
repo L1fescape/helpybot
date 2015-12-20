@@ -1,26 +1,26 @@
-import _ from 'lodash';
+var _ = require('lodash');
 
 function randomResponse(user) {
   var responses = [
-    `hi ${user.name}!`,
-    `hello ${user.name}!`
+    'hi ' + user.name + '!',
+    'hello ' + user.name + '!'
   ];
   return _.shuffle(responses)[0];
 }
 
-export default function (bot) {
+module.exports = function(bot) {
 
   var regex = /^(hi|hello|hai)$/i
 
-  bot.command(regex, 'hi - say hello!', (text, channel, user) => {
+  bot.command(regex, 'hi - say hello!', function(text, channel, user) {
     channel.send(randomResponse(user))
   });
 
-  bot.hear(regex, (text, channel, user) => {
+  bot.hear(regex, function(text, channel, user) {
     channel.send(randomResponse(user))
   });
 
-  bot.hear(/^bye$/i, (text, channel, user) => {
+  bot.hear(/^bye$/i, function(text, channel, user) {
     channel.send('good riddance');
   });
 }

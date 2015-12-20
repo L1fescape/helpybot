@@ -1,4 +1,4 @@
-import HelpyBot from './lib';
+var HelpyBot = require('./lib');
 
 new HelpyBot({
   token: process.env.SLACK_TOKEN,

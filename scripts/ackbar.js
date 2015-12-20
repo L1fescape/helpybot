@@ -19,13 +19,13 @@ var tarps = [
   'http://i.imgur.com/5h2RptE.jpg'
 ];
 
-export default function (bot) {
+module.exports = function (bot) {
 
-  bot.hear(/it'?s a trap/i, 'it\'s a trap - Display an Admiral Ackbar piece of wonder', (text, channel) => {
+  bot.hear(/it'?s a trap/i, 'it\'s a trap - Display an Admiral Ackbar piece of wonder', function(text, channel) {
     channel.send(ackbars[Math.floor(Math.random()*ackbars.length)]);
   });
 
-  bot.hear(/it'?s a tarp/i, (msg) => {
+  bot.hear(/it'?s a tarp/i, function(msg) {
     channel.send(tarps[Math.floor(Math.random()*tarps.length)]);
   });
 }

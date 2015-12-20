@@ -1,8 +1,8 @@
-export default function (bot) {
+module.exports = function (bot) {
 
   var regex = /.*(smash).*/i
 
-  bot.hear(regex, (text, channel) => {
+  bot.hear(regex, function(text, channel) {
     channel.send('Did someone say smash?')
   });
 }

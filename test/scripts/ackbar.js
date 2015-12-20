@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-describe('Ackbar script', () => {
+describe('Ackbar script', function() {
   beforeEach(function() {
     this.bot = new HelpyBot({
       token: '12345',
