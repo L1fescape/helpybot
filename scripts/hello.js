@@ -10,7 +10,7 @@ function randomResponse(user) {
 
 module.exports = function(bot) {
 
-  var regex = /^(hi|hello|hai)$/i
+  var regex = /^(hi|hello|hai|yo)$/i
 
   bot.command(regex, 'hi - say hello!', function(text, channel, user) {
     channel.send(randomResponse(user))

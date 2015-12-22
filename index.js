@@ -7,9 +7,7 @@ new HelpyBot({
     'hello',
     'pugme',
     'ackbar',
-    'markov',
     'smash',
-    'poll',
     'thuglife'
   ]
 });

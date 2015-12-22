@@ -2,7 +2,7 @@
 
 ## HelpyBot [![Build Status](https://travis-ci.org/akenn/helpybot.svg?branch=master)](https://travis-ci.org/akenn/helpybot)
 
-> A Slack Bot
+> A Slack Bot inspired by [Hubot](https://github.com/github/hubot)
 
 ### Install
 
@@ -23,7 +23,19 @@ SLACK_TOKEN=[your slack token] npm start
 - it's a trap - Display an Admiral Ackbar piece of wonder
 - smash - Did someone say it?
 
-### Run tests
+### API
+
+##### bot.getChannels()
+
+##### bot.getChannel(String channelName | String channelID)
+
+##### bot.getUser(String channelName)
+
+##### bot.command(RegEx regex, String helpText, Function callback)
+
+##### bot.hear(RegEx regex, String helpText, Function callback)
+
+### Tests
 
 ```
 npm test
