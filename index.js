@@ -4,6 +4,7 @@ new HelpyBot({
   token: process.env.SLACK_TOKEN,
   debug: true,
   scripts: [
+    'help',
     'hello',
     'pugme',
     'ackbar',
