@@ -8,6 +8,7 @@ new HelpyBot({
     'hello',
     'pugme',
     'ackbar',
+    'say',
     'smash',
     'thuglife'
   ]
