@@ -10,6 +10,7 @@ new HelpyBot({
     'ackbar',
     'say',
     'smash',
-    'thuglife'
+    'thuglife',
+    'table-flip'
   ]
 });
